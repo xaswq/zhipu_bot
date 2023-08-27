@@ -1,8 +1,8 @@
-# pip install zhipuai 请先在终端进行安装
+# 首先请安装对应的库 pip install zhipuai
 import zhipuai
 
 def converse_with_zhipuai():
-    zhipuai.api_key = "xxxxxx"
+    zhipuai.api_key = ""
 
     # 初始化对话列表
     prompt_list = []
@@ -34,7 +34,6 @@ def converse_with_zhipuai():
         # 打印回复并添加到prompt_list
         print(f"助手：{assistant_reply}")
         prompt_list.append({"role": "assistant", "content": assistant_reply})
-        #print(prompt_list)
 
         # 可选：为了不让对话无限进行，你可以设置一个退出机制，例如当用户输入"退出"时。
         if user_input.lower() == "退出":
